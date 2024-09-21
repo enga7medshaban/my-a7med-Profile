@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"> <!-- ترميز الأحرف -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- تعيين عرض العرض ليكون مناسباً لمختلف الشاشات -->
+    <title> my Profile</title> <!-- عنوان الصفحة -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"> <!-- إضافة Font Awesome -->
+    <link rel="stylesheet" href="css/prof.css">
+</head>
+<body>
+    <!-- شريط التنقل -->
+    <div class="navbar">
+        <a href="#home">Home</a> <!-- رابط إلى قسم الصفحة الرئيسية -->
+        <a href="#education">Education</a> <!-- رابط إلى قسم التعليم -->
+        <a href="#skills">Skills</a> <!-- رابط إلى قسم المهارات -->
+        <a href="#My works">My works</a> <!-- رابط إلى قسم عن -->
+        <a href="#connect">connect</a> <!-- رابط إلى قسم عن -->
+        <div class="theme-toggle" onclick="toggleTheme()">
+            <img src="https://img.icons8.com/ios/50/000000/moon-symbol.png" alt="Moon Icon" class="moon">
+            <img src="https://img.icons8.com/ios/50/000000/sun.png" alt="Sun Icon" class="sun">
+        </div>
+    </div>
+
+    <!-- قسم الملف الشخصي -->
+    <div id="home" class="container">
+        <img src="mg/my.jpg" alt="Profile Picture" class="profile-pic"> <!-- صورة الملف الشخصي -->
+        <div class="info">
+            <h1 id="typing-text"><span class="greeting">Hi, I'm </span><span class="name">Ahmed Shaban Hassan</span></h1>
+            <h2>I'm a Front-End Developer</h2> <!-- العنوان الوظيفي -->
+            <p>I am a professional Front-End Developer, specializing in designing and building engaging and interactive user interfaces,<br> with a strong focus on user experience and best practices in web development.</p> <!-- وصف -->
+            <div class="buttons">
+                <a href="#My works">My works</a> <!-- رابط إلى قسم عن -->
+                <a href="#education">My Education</a> <!-- رابط إلى قسم التعليم -->
+                <a href="#skills">My Skills</a> <!-- رابط إلى قسم المهارات -->
+
+            </div>
+        </div>
+    </div>
+
+    <!-- قسم التعليم -->
+    <div id="education" class="header">
+        <h1><span class="highlight">My</span> Education</h1> <!-- عنوان قسم التعليم -->
+    </div>
+    <div class="container-education">
+        <div class="card">
+            <i class="fas fa-user-graduate"></i> <!-- أيقونة تخرج -->
+            <h2>BE IT</h2> <!-- الدرجة العلمية -->
+            
+            <h5>  *Graduate of MET University - Faculty of Management Information Systems*</h5> <!-- وصف الدرجة العلمية -->
+            <p>I earned a Bachelor's degree from MET University in Management Information Systems. My studies equipped me with skills in data analysis, database management, system design, and software development. This education has enhanced my analytical abilities and strategic thinking, preparing me to tackle challenges in the digital field.</p> <!-- تفاصيل الدراسة -->
+            <p>2021-2024</p> <!-- تاريخ الدراسة -->
+        </div>
+        <div class="card">
+            <i class="fas fa-user-graduate"></i> <!-- أيقونة تخرج -->
+            <h2>Diploma</h2> <!-- الدبلوم -->
+            <h5>Diploma in Web Development</h5> <!-- وصف الدبلوم -->
+            <p>I hold a diploma in Front-End Development from Mansoura University, where I gained advanced skills in designing and developing interactive interfaces. My studies equipped me with strong abilities in using the latest technologies for web design and application development, preparing me to effectively tackle market challenges..</p> <!-- تفاصيل الدبلوم -->
+            <p>MSBTE, 78% marks, 2020-2024</p> <!-- تاريخ الدبلوم والنتائج -->
+        </div>
+        <div class="card">
+            <i class="fas fa-user-graduate"></i> <!-- أيقونة تخرج -->
+            <h2>The second stage</h2> <!-- الشهادة الثانوية -->
+            <p>I achieved a score of 75% in my high school diploma in 2020. This phase was filled with challenges and accomplishments, as I had a strong passion for academic success. This achievement reflects my dedication and commitment to learning, and I look forward to using this foundation to pursue my future goals.</p> <!-- نتائج الشهادة الثانوية -->
+            
+        </div>
+    </div>
+
+    <!-- قسم المهارات -->
+    <div id="skills" class="header">
+        <h1><span class="highlight">My</span> Skills</h1> <!-- عنوان قسم المهارات -->
+    </div>
+    <div class="skills-container">
+        <a href="https://www.w3schools.com/html/" class="skill" target="_blank">
+            <i class="fab fa-html5"></i> <!-- أيقونة HTML -->
+            <h2>HTML</h2> <!-- اسم المهارة -->
+        </a>
+        <a href="https://www.w3schools.com/css/" class="skill" target="_blank">
+            <i class="fab fa-css3-alt"></i> <!-- أيقونة CSS -->
+            <h2>CSS</h2> <!-- اسم المهارة -->
+        </a>
+        <a href="https://www.w3schools.com/js/" class="skill" target="_blank">
+            <i class="fab fa-js"></i> <!-- أيقونة JavaScript -->
+            <h2>JavaScript</h2> <!-- اسم المهارة -->
+        </a>
+        <a href="https://reactjs.org/" class="skill" target="_blank">
+            <i class="fab fa-react"></i> <!-- أيقونة React -->
+            <h2>React</h2> <!-- اسم المهارة -->
+        </a>
+        <a href="https://www.php.net/manual/en/intro-whatis.php" class="skill" target="_blank">
+            <i class="fab fa-php"></i> <!-- أيقونة PHP -->
+            <h2>PHP</h2> <!-- اسم المهارة -->
+        </a>
+        <a href="https://www.mysql.com/" class="skill" target="_blank">
+            <i class="fas fa-database"></i> <!-- أيقونة MySQL -->
+            <h2>MySQL</h2> <!-- اسم المهارة -->
+        </a>
+        <a href="https://github.com/" class="skill" target="_blank">
+            <i class="fab fa-github"></i> <!-- أيقونة GitHub -->
+            <h2>GitHub</h2> <!-- اسم المهارة -->
+        </a>
+        <a href="https://wordpress.org/" class="skill" target="_blank">
+            <i class="fab fa-wordpress"></i> <!-- أيقونة WordPress -->
+            <h2>WordPress</h2> <!-- اسم المهارة -->
+        </a>
+    </div>
+<br><br><br><br>
+
+<div class="lang-container">
+    <h1>Languages</h1>
+    <div class="lang-language">
+        <h2>English</h2>
+        <div class="lang-progress-bar">
+            <div class="lang-progress"></div>
+        </div>
+    </div>
+    <div class="lang-language">
+        <h2>Arabic</h2>
+        <div class="lang-progress-bar">
+            <div class="lang-progress-arabic"></div>
+        </div>
+    </div>
+</div>
+
+
+    
+   
+<br><br><br><br>
+
+    <!-- قسم العنوان -->
+    <div class="header">
+        <div id="My works" class="header">
+            <h1><span class="highlight">My</span> works</h1> <!-- عنوان قسم المهارات -->
+    </div>
+    <br><br><br><br>
+    <section class="portfolio">
+      
+        <a href="html/ADY2.html"> <!-- رابط للصفحة التي تريد الانتقال إليها -->
+            <img src="mg/ADY2.jpg" alt="وصف الصورة 3"> <!-- صورة العمل 3 -->
+        </a>
+        <a href="html/cafe.html"> <!-- رابط للصفحة التي تريد الانتقال إليها -->
+            <img src="mg/ady1.jpg" alt="وصف الصورة 3"> <!-- صورة العمل 3 -->
+        </a>
+        <a href="html/pizza.html"> <!-- رابط للصفحة التي تريد الانتقال إليها -->
+            <img src="mg/pizz.jpg" alt="وصف الصورة 3"> <!-- صورة العمل 3 -->
+        </a>
+        
+        
+        
+    </section>
+  <!-- قسم الملف الشخصي -->
+  <div class="header">
+    <div id="connect" class="header">
+        <h2><span class="highlight">TO</span> connect</h2> <!-- عنوان قسم المهارات -->
+
+   <!-- قسم التواصل -->
+   <div class="custom-contact">
+    
+    <div class="contact-item">
+        <span>Email:</span>
+        <a href="mailto:a7med_shaban0@gmel.com">a7med_shaban0@gmel.com</a>
+    </div>
+    <div class="contact-item">
+        <span>Phone:</span>
+        <a href="tel:+201062272149">01062272149</a>
+    </div>
+    <div class="contact-item">
+        <span>Address:</span>
+        <p>Gamal Abdel Nasser Street, Mansoura City, Dakahlia Governorate, Egypt</p>
+    </div>
+    
+    <!-- أيقونات وسائل التواصل الاجتماعي -->
+    <div class="custom-social-media">
+        <a href="https://wa.me/201062272149" target="_blank">
+            <i class="fab fa-whatsapp" style="font-size: 24px; color: #25D366;"></i>
+        </a>
+        <a href="https://www.facebook.com/YourProfile" target="_blank">
+            <i class="fab fa-facebook" style="font-size: 24px; color: #4267B2;"></i>
+        </a>
+        <a href="https://www.instagram.com/techt_ales0?igsh=MXNmZ2hrM3U5ejUwNA==" target="_blank">
+            <i class="fab fa-instagram" style="font-size: 24px; color: #C13584;"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/YourProfile" target="_blank">
+            <i class="fab fa-linkedin" style="font-size: 24px; color: #0077B5;"></i>
+        </a>
+    </div>
+</div>
+</div>
+</div>
+<script src="js/prof.js"></script>
+</body>
+</html>

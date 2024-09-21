@@ -1,0 +1,501 @@
+/* تصميم على الشاشات الصغيرة (هواتف) */
+@media (max-width: 500px) {
+    body {
+        background-color: rgb(0, 0, 0);
+        font-size: 14px;
+    }
+}
+
+/* تصميم على الشاشات المتوسطة (تابلت) */
+@media (min-width: 601px) and (max-width: 900px) {
+    body {
+        background-color: lightgreen;
+        font-size: 16px;
+    }
+}
+
+/* تصميم على الشاشات الكبيرة (لاب توب) */
+@media (min-width: 901px) {
+    body {
+        background-color: lightyellow;
+        font-size: 18px;
+    }
+}
+  body {
+    /* المساحة تحت الـ navbar */
+
+    padding-top: 50px; /* تأكد من أن المسافة تتناسب مع ارتفاع الـ navbar */
+
+    font-family: Arial, sans-serif; /* نوع الخط */
+    background-color: #fff; /* لون الخلفية */
+    color: #333; /* لون النص */
+    margin: 0; /* إزالة الهوامش */
+    padding: 0; /* إزالة الحشو */
+    display: flex; /* استخدام Flexbox لتصميم العناصر */
+    flex-direction: column; /* تنظيم العناصر عمودياً */
+    align-items: center; /* محاذاة العناصر في المنتصف */
+    transition: background-color 0.3s ease, color 0.3s ease; /* تأثير الانتقال عند تغيير اللون */
+}
+
+
+.navbar {
+    position: fixed;
+    background-color: #333; /* لون خلفية شريط التنقل */
+    width: 100%; /* عرض شريط التنقل */
+    overflow: hidden; /* إخفاء العناصر الزائدة */
+    top: 0; /* تثبيت الـ navbar في الأعلى */
+    z-index: 1000; /* جعله فوق باقي العناصر */
+}
+
+.navbar a {
+    float: left; /* محاذاة الروابط لليسار */
+    display: block; /* عرض الروابط كعناصر كتلة */
+    color: #f2f2f2; /* لون النص في الروابط */
+    text-align: center; /* محاذاة النص في الوسط */
+    padding: 15px 20px; /* الحشو داخل الروابط */
+  
+}
+
+.navbar a:hover {
+    background-color: #ddd; /* تغيير لون الخلفية عند المرور بالفأرة */
+    color: black; /* تغيير لون النص عند المرور بالفأرة */
+    text-decoration: none; /* إزالة التسطير */
+}
+
+.theme-toggle {
+    float: right; /* محاذاة رمز التبديل لليمين */
+    padding: 14px 20px; /* الحشو حول رمز التبديل */
+    cursor: pointer; /* تغيير شكل المؤشر عند التمرير فوق رمز التبديل */
+}
+
+.theme-toggle img {
+    width: 50px; /* عرض رمز التبديل */
+    height: 50px; /* ارتفاع رمز التبديل */
+    transition: filter 0.3s ease; /* تأثير الانتقال عند تغيير اللون */
+}
+
+.theme-toggle img.moon {
+    filter: drop-shadow(0 0 2px #fff) brightness(1.2); /* تأثير الظل على رمز القمر */
+}
+
+.theme-toggle img.sun {
+    filter: drop-shadow(0 0 2px #ff0) brightness(1.5); /* تأثير الظل على رمز الشمس */
+}
+
+.container {
+    display: flex; /* استخدام Flexbox لتصميم العناصر */
+    align-items: center; /* محاذاة العناصر في المنتصف */
+    justify-content: center; /* توزيع العناصر بشكل متساوي */
+    padding: 130px 50px 50px; /* الحشو داخل الحاوية */
+    width: 100%; /* عرض الحاوية */
+    max-width: 1200px; /* الحد الأقصى لعرض الحاوية */
+}
+
+.profile-pic {
+    border-radius: 50%; /* جعل الصورة دائرية */
+    width: 370px; /* عرض الصورة */
+    height: 370px; /* ارتفاع الصورة */
+    margin-left: 200px; /* الهوامش حول الصورة من اليسار */
+    margin-right: 30px; /* الهوامش حول الصورة من اليمين */
+    order: 2; /* ترتيب الصورة بعد المعلومات */
+}
+
+.info {
+    text-align: left; /* محاذاة النص لليسار */
+    margin-right: 20px; /* الهامش على اليمين */
+    order: 1; /* ترتيب المعلومات قبل الصورة */
+}
+
+.info h1 {
+    font-size: 2.5em; /* حجم خط العنوان */
+    margin: 0; /* إزالة الهوامش */
+}
+
+.info h1 .name {
+    color: #007bff; /* لون اسم المستخدم */
+}
+
+.info h1 .greeting {
+    color: #000; /* لون التحية */
+    transition: color 0.3s ease; /* تأثير الانتقال عند تغيير اللون */
+}
+
+.info h2 {
+    font-size: 1.8em; /* حجم خط العنوان الفرعي */
+    color: #ef1313; /* لون النص */
+}
+
+.info p {
+    font-size: 1.2em; /* حجم النص */
+    color: #000000; /* لون النص */
+}
+
+.buttons {
+    margin-top: 70px; /* الهامش من الأعلى */
+    text-align: center; /* لجعل الأزرار في المنتصف (اختياري) */
+}
+
+.buttons a {
+    display: inline-block; /* لجعل الأزرار بجانب بعضها البعض */
+    text-decoration: none; /* إزالة التسطير */
+    color: white; /* لون النص */
+    background-color: #333; /* لون خلفية الأزرار */
+    padding: 5px 20px; /* تقليل الحشو لتصغير حجم الأزرار */
+    border-radius: 10px; /* تحديد زوايا الأزرار */
+    margin: 10px; /* الهوامش حول الأزرار */
+    font-size:20px;
+}
+
+.buttons a:hover {
+    background-color: #555; /* تغيير لون الخلفية عند المرور بالفأرة */
+    color: #ff0000; /* تغيير لون النص عند المرور بالفأرة */
+    text-decoration: none; /* إزالة التسطير */
+}
+
+.dark-theme {
+    background-color: #333; /* لون الخلفية في الوضع الداكن */
+    color: #fff; /* لون النص في الوضع الداكن */
+}
+
+.dark-theme .navbar {
+    background-color: #555; /* لون خلفية شريط التنقل في الوضع الداكن */
+}
+
+.dark-theme .navbar a {
+    color: #ddd; /* لون النص في الروابط في الوضع الداكن */
+}
+
+.dark-theme .navbar a:hover {
+    background-color: #777; /* تغيير لون الخلفية عند المرور بالفأرة في الوضع الداكن */
+    color: #fff; /* تغيير لون النص عند المرور بالفأرة في الوضع الداكن */
+}
+
+.dark-theme .buttons a {
+    background-color: #ffffff; /* لون خلفية الأزرار في الوضع الداكن */
+    color: #004cff; /* لون النص في الأزرار في الوضع الداكن */
+}
+
+.dark-theme .info p {
+    color: #f20707; /* لون النص في الفقرات في الوضع الداكن */
+}
+
+.dark-theme .info h2 {
+    color: #ffffff; /* لون النص في العناوين الفرعية في الوضع الداكن */
+}
+
+.dark-theme .buttons a:hover {
+    background-color: #777; /* تغيير لون الخلفية عند المرور بالفأرة في الوضع الداكن */
+}
+
+.dark-theme .info h1 .greeting {
+    color: #fff; /* لون التحية في الوضع الداكن */
+}
+
+.theme-toggle img.sun {
+    display: none; /* إخفاء رمز الشمس في الوضع الداكن */
+}
+
+.dark-theme .theme-toggle img.moon {
+    display: none; /* إخفاء رمز القمر في الوضع الداكن */
+}
+
+.header {
+    text-align: center; /* محاذاة النص في الوسط */
+    margin-top: 80px; /* الهامش من الأعلى */
+}
+
+.header h1 {
+    margin: 0; /* إزالة الهوامش */
+    font-size: 2em; /* حجم الخط */
+}
+
+.header .highlight {
+    color: #007bff; /* لون التمييز */
+    font-size: 1.5em; /* حجم أكبر لكلمة التمييز */
+}
+
+/* بداية قسم التعليم */
+.container-education {
+    display: flex; /* استخدام Flexbox لتصميم العناصر */
+    flex-wrap: wrap; /* التمكن من لف العناصر عند الحاجة */
+    gap: 30px; /* المسافة بين البطاقات */
+    width: 80%; /* عرض الحاوية */
+    max-width: 1200px; /* الحد الأقصى لعرض الحاوية */
+    margin-top: 80px; /* الهامش من الأعلى */
+    padding: 5px; /* إضافة حشوة حول البطاقات */
+    box-sizing: border-box; /* التأكد من أن الحشوة لا تؤثر على العرض */
+}
+
+.card {
+    background-color: #f4f4f4; /* لون الخلفية للبطاقات */
+    border: 2px solid #ffcc00; /* لون حد البطاقة */
+    padding: 20px; /* الحشو داخل البطاقة */
+    border-radius: 10px; /* تحديد زوايا البطاقة */
+    text-align: center; /* محاذاة النص في الوسط */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* تأثير الظل */
+    flex: 1; /* جعل البطاقات تتساوى في العرض */
+    min-width: 200px; /* الحد الأدنى لعرض البطاقة */
+    height: 400px; /* ارتفاع البطاقة */
+    position: relative; /* تعيين موضع نسبي */
+    transition: background-color 0.3s, box-shadow 0.3s; /* تأثير الانتقال عند تغيير اللون والظل */
+    transition: transform 0.3s ease; /* إضافة تأثير التدرج لحركة الكارت */
+}
+
+.card:hover {
+    background-color: #96abf7; /* لون خلفية البطاقة عند المرور بالفأرة */
+    box-shadow: 0 20px 30px rgba(0, 0, 0, 0.5); /* زيادة تأثير الظل عند المرور بالفأرة */
+    transform: translateY(10px); /* تحريك الكارت 10 بكسل إلى الأسفل عند التحويم */
+}
+
+.card i {
+    font-size: 3em; /* حجم الأيقونة */
+    color: #007bff; /* لون الأيقونة */
+    margin-bottom: 10px; /* الهامش أسفل الأيقونة */
+}
+
+.card h2 {
+    margin: 0; /* إزالة الهوامش */
+    font-size: 1.2em; /* حجم خط العنوان الفرعي */
+    color: #333; /* لون النص */
+}
+
+.card p {
+    margin: 5px 0; /* الهوامش حول النص */
+    font-size: 1em; /* حجم الخط */
+    color: #666; /* لون النص */
+}
+
+/* نهاية قسم التعليم */
+
+/* بداية قسم المهارات */
+.skills-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap:50px;
+            width: 80%;
+            max-width: 1200px;
+            margin-top: 70px;
+            padding: 20px;
+            box-sizing: border-box; /* التأكد من أن الحشوة لا تؤثر على العرض */
+        }
+        .skill {
+            background-color: #f4f4f4; /* لون خلفية الأيقونات */
+            border: 2px solid #ffcc00; /* حد الأيقونات بلون مميز */
+            padding: 20px;
+            border-radius: 42px; /* شكل مستطيل مع زوايا مستديرة */
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* تأثير الظل للأيقونات */
+            transition: background-color 0.3s, box-shadow 0.3s; /* تأثير الانتقال عند التغيير */
+            position: relative;
+            overflow: hidden;
+            text-decoration: none; /* إزالة الخط السفلي من الروابط */
+        }
+        .skill:hover {
+            background-color: #ac8686; /* لون خلفية الأيقونات عند المرور بالفأرة */
+            box-shadow: 0 20px 30px rgba(0, 0, 0, 0.5); /* زيادة تأثير الظل عند المرور بالفأرة */
+            text-decoration: none; /* إزالة الخط السفلي من الروابط */
+            transition: transform 0.3s ease; /* إضافة تأثير التدرج لتكبير الأيقونة */
+            transform: scale(1.2); /* تكبير الأيقونة عند التحويم بنسبة 20% */
+}
+        
+        .skill i {
+            font-size: 3em;
+            color: #007bff; /* لون الأيقونة */
+            margin-bottom: 10px;
+        }
+        .skill h2 {
+            margin: 0;
+            font-size: 1.2em;
+            color: #333; /* لون النص */
+        }
+/* تنسيقل اللغه */
+
+  /* تنسيق حاوية الأعمال */
+.portfolio-container {
+    display: flex; /* استخدام Flexbox */
+    flex-wrap: wrap; /* السماح بلف العناصر في صفوف */
+    gap:50px; /* المسافة بين العناصر */
+    justify-content: space-between; /* توزيع العناصر بشكل متساوي */
+    width: 80%; /* عرض الحاوية */
+    max-width: 1200px; /* الحد الأقصى لعرض الحاوية */
+    margin: 40px auto; /* محاذاة الحاوية في الوسط */
+}
+#m {
+            color: #fff;
+            text-align: center;
+            background-color: #003366;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        h3 {
+            text-align: right;
+            color: rgb(53, 8, 8);
+        }
+
+        .portfolio {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .portfolio img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+            transition: transform 0.3s ease-in-out;
+            cursor: pointer; /* مؤشر الفأرة يظهر كأنه يشير إلى عنصر قابل للنقر */
+        }
+
+        .portfolio img:hover {
+            transform: scale(1.1);
+        }
+
+        /* تنسيق نافذة العرض المكبر */
+        .modal {
+            display: none; /* لا تظهر النافذة بشكل افتراضي */
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.8);
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+
+        .modal img {
+            max-width: 90%;
+            max-height: 90%;
+            margin: auto;
+            border-radius: 8px;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            font-size: 30px;
+            color: white;
+            cursor: pointer;
+            z-index: 1001;
+        }
+
+        a {
+            display: block;
+            text-align: right;
+            color: #007BFF;
+            text-decoration: none;
+            margin: 20px;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+/* تنسيق القسم الخاص بالتواصل */
+.custom-contact {
+        margin-top: 20px;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .custom-contact h3 {
+        font-size: 24px;
+        color: #0073e6;
+        margin-bottom: 10px;
+    }
+
+    .custom-contact .contact-item {
+        display: flex;
+        align-items: center;
+        margin: 5px 0;
+    }
+
+    .custom-contact .contact-item span {
+        margin-right: 200px; /* مسافة بين النص والرابط */
+        color: #555;
+    }
+
+    .custom-contact a {
+        color: #0073e6;
+        text-decoration: none;
+    }
+
+    .custom-contact a:hover {
+        text-decoration: underline;
+    }
+
+    /* تنسيق الأيقونات في قسم وسائل التواصل الاجتماعي */
+    .custom-social-media {
+        display: flex;
+        gap: 15px;
+        margin-top: 15px;
+    }
+
+    .custom-social-media a {
+        font-size: 24px;
+        color: inherit;
+        text-decoration: none;
+        transition: transform 0.3s ease, color 0.3s ease;
+    }
+
+    .custom-social-media a:hover {
+        transform: scale(1.2);
+        color: #0073e6;
+    }
+    /* language    */
+    
+  
+
+    .lang-container {
+        text-align:left;
+        margin-right: 400px;
+    }
+
+    .lang-language {
+        margin-top: 20px;
+        display: flex;
+        align-items: center;
+       
+    }
+
+    .lang-language h2 {
+        margin-right: 10px;
+        width: 100px;
+    }
+
+    .lang-progress-bar {
+        width: 500px;
+        height: 12px;
+        background-color: #ddd;
+        border-radius: 5px;
+        overflow: hidden;
+    }
+
+    .lang-progress {
+        height: 15px;
+        background-color: #4caf50; /* لون الإنجليزي */
+        transition: width 2s; /* تأثير الحركة */
+        width: 60%; /* نسبة الإنجليزي */
+    }
+
+    .lang-progress-arabic {
+        height: 15px;
+        background-color: #2196f3; /* لون العربي */
+        transition: width 2s; /* تأثير الحركة */
+        width: 100%; /* نسبة العربي */
+    }
+
